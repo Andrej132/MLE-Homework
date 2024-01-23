@@ -8,9 +8,6 @@ docker build -t inference .
 
 After that, we can run the train.py and main.py files in separate containers with the following commands: 
 
-docker run -v "%cd%\..\model:/app/model:rw" -v "%cd% \..\data:/app/data:rw" training
+docker run -v "%cd%\\..\\model:/app/model:rw" -v "%cd%\\..\\data:/app/data:rw" training
 
-docker run -v "%cd%\..\model:/app/model:rw" -v "%cd% \..\data:/app/data:rw" inference
-
-"\" after %cd% is required. It is not visible for some reason..
-
+docker run -v "%cd%\\..\\model:/app/model:rw" -v "%cd%\\..\\data:/app/data:rw" inference
